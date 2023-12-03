@@ -4,7 +4,7 @@ name: godot-ci
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 env:
   EXPORT_NAME: 3D Movement
