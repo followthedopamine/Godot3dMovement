@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0whl46jcobb0"]
+
+[ext_resource type="Script" path="res://PlayerFootsteps.gd" id="1_4kshu"]
+[ext_resource type="AudioStream" uid="uid://qli5fxhgfk2n" path="res://Sounds/Footsteps_Walk_Grass_Mono_03.wav" id="2_wjkp0"]
+
+[node name="PlayerSound" type="Node3D"]
+
+[node name="PlayerFootsteps" type="Node3D" parent="."]
+script = ExtResource("1_4kshu")
+
+[node name="FootstepsGrass" type="AudioStreamPlayer3D" parent="PlayerFootsteps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+stream = ExtResource("2_wjkp0")

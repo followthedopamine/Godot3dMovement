@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjy2fyqaia444"]
+[gd_scene load_steps=5 format=3 uid="uid://bjy2fyqaia444"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_chupd"]
+[ext_resource type="PackedScene" uid="uid://d0whl46jcobb0" path="res://PlayerSound.tscn" id="2_q7ty5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8j24j"]
 
@@ -25,3 +26,5 @@ transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 
 
 [node name="PlayerCamera3D" type="Camera3D" parent="TwistPivot/PitchPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="PlayerSound" parent="." instance=ExtResource("2_q7ty5")]
