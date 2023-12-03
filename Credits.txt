@@ -1,3 +1,6 @@
 Footsteps tutorial:
 
 https://www.youtube.com/watch?v=WhMfocT9l-o
+
+CICD pipeline:
+https://dev.to/jeremyckahn/automating-godot-game-releases-to-itchio-1a96
