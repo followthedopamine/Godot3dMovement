@@ -8,20 +8,20 @@ var pitch_input := 0.0
 @onready var pitch_pivot := $TwistPivot/PitchPivot
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	pass
 	
 func _process(delta):
 	handle_movement(delta)
 	handle_rotation()
-	
 
 func _unhandled_input(event: InputEvent) -> void:
+	if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event is InputEventMouseMotion:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			twist_input = - event.relative.x * mouse_sensitivity
 			pitch_input = - event.relative.y * mouse_sensitivity
-		else:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func handle_movement(delta) -> void:
 	var input = Vector3.ZERO
