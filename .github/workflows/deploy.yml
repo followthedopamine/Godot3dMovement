@@ -72,6 +72,15 @@ jobs:
         with:
           name: web
           path: build/web
+
+      - name: Publish to itch.io
+        uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
+          CHANNEL: web
+          ITCH_GAME: 3d-movement
+          ITCH_USER: FollowTheDopamine
+          PACKAGE: build/web
 # name: "godot-ci export"
 # on:
 #   push:
