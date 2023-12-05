@@ -3,7 +3,7 @@ on: push
 
 env:
   GODOT_VERSION: 4.1.3
-  EXPORT_NAME: 3DMovement
+  EXPORT_NAME: 3D Movement
   PROJECT_PATH: Godot3dMovement
 
 jobs:
@@ -64,7 +64,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: web
-          ITCH_GAME: 3D Movement
+          ITCH_GAME: 3d-movement
           ITCH_USER: FollowTheDopamine
           PACKAGE: project/${{ env.EXPORT_NAME }}/build/web
 # name: "godot-ci export"
