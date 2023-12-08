@@ -8,12 +8,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ObjectLabel" type="Label" parent="."]
+[node name="HoverTooltip" type="Control" parent="."]
 visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ObjectLabel" type="Label" parent="HoverTooltip"]
 layout_mode = 0
-offset_left = 862.0
-offset_top = 489.0
-offset_right = 902.0
-offset_bottom = 515.0
-theme_override_font_sizes/font_size = 200
-text = "Test"
+offset_left = 1023.0
+offset_top = 519.0
+offset_right = 1319.0
+offset_bottom = 591.0
+theme_override_font_sizes/font_size = 50
+text = "Sample Text"

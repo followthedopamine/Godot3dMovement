@@ -1,13 +1,18 @@
 extends RayCast3D
 
-@onready var object_label := $/root/Main/HUD/ObjectLabel
+@onready var hover_tooltip := $/root/Main/HUD/HoverTooltip
+@onready var object_label := $/root/Main/HUD/HoverTooltip/ObjectLabel
 
 func _physics_process(delta):
 	if is_colliding():
 		var collider := get_collider()
-		print(collider.get_parent().name)
-		if "button" in collider.get_parent().name.to_lower():
-			object_label.set_visible(true)
+		var tooltip = collider.get_parent().get_node_or_null("Tooltip")
+		if tooltip != null:
+			object_label.text = tooltip.label
+			hover_tooltip.set_visible(true)
 		else:
-			object_label.set_visible(false)
-		
+			hover_tooltip.set_visible(false)
+	else:
+		hover_tooltip.set_visible(false)
+
+	

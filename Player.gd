@@ -14,7 +14,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _process(delta):
-	handle_movement(delta)
+	handle_movement(delta) # These should probably be moved to input
 	handle_rotation()
 	jump()
 
