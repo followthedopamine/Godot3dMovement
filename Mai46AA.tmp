@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bhy6a6aa16ugh"]
+[gd_scene load_steps=16 format=3 uid="uid://bhy6a6aa16ugh"]
 
 [ext_resource type="PackedScene" uid="uid://bjy2fyqaia444" path="res://Player.tscn" id="1_ggftm"]
 [ext_resource type="PackedScene" uid="uid://dfbwpafkigs32" path="res://HUD.tscn" id="1_v4w4j"]
 [ext_resource type="Script" path="res://Tooltip.gd" id="3_g6vh5"]
-[ext_resource type="Script" path="res://HideButton.gd" id="4_rwe8p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3cupw"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -104,9 +103,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_10rcm")
 [node name="Tooltip" type="Node3D" parent="RedButton"]
 script = ExtResource("3_g6vh5")
 label = "Press Button"
-
-[node name="Interact" type="Node3D" parent="RedButton"]
-script = ExtResource("4_rwe8p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="RedButton"]
 

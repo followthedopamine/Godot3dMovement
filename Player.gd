@@ -52,3 +52,5 @@ func jump() -> void:
 	if Input.is_action_pressed("jump") and can_jump:
 		apply_central_force(Vector3(0, jump_force, 0))
 		can_jump = false
+		
+
