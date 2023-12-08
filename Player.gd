@@ -25,9 +25,7 @@ func _input(event: InputEvent) -> void:
 		#if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		twist_input = - event.relative.x * mouse_sensitivity
 		pitch_input = - event.relative.y * mouse_sensitivity
-		print(twist_input)
-			
-			
+
 func on_body_entered(body: Node3D):
 	if "floor" in body.name.to_lower():
 		can_jump = true
