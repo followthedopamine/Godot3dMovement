@@ -21,6 +21,11 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
 
+[filesystem]
+
+import/blender/enabled.android=true
+import/blender/enabled.web=true
+
 [input]
 
 move_forward={

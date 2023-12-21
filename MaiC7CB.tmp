@@ -128,6 +128,7 @@ data = PackedVector3Array(-0.120918, 0.733662, -0.0500858, -0.128366, 0.775691, 
 [sub_resource type="Animation" id="Animation_p0vub"]
 resource_name = "ButtonPress-loop"
 length = 0.833333
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -205,7 +206,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_10rcm")
 shape = SubResource("ConvexPolygonShape3D_kiuta")
 
 [node name="RedButton2" type="Node3D" parent="."]
-transform = Transform3D(2.30476, 0, 0, 0, 2.30476, 0, 0, 0, 2.30476, 1.18143, 2.38419e-07, 0.46963)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18143, 2.38419e-07, 0.46963)
 
 [node name="Cube" type="MeshInstance3D" parent="RedButton2"]
 mesh = SubResource("ArrayMesh_abqy3")
@@ -216,28 +217,10 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RedButton2/Cube/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ygm8u")
 
-[node name="Interact" type="Node3D" parent="RedButton2/Cube"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0516, 2.23212, 19.9283)
-script = ExtResource("4_rwe8p")
-
-[node name="Tooltip" type="Node3D" parent="RedButton2/Cube"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02579, 1.11585, 9.96417)
-script = ExtResource("3_g6vh5")
-label = "Press Button"
-
 [node name="Button" type="MeshInstance3D" parent="RedButton2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000419566, 0)
 mesh = SubResource("ArrayMesh_lmnk5")
 skeleton = NodePath("")
-
-[node name="Tooltip" type="Node3D" parent="RedButton2/Button"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02579, 1.11627, 9.96417)
-script = ExtResource("3_g6vh5")
-label = "Press Button"
-
-[node name="Interact" type="Node3D" parent="RedButton2/Button"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02579, 1.11627, 9.96417)
-script = ExtResource("4_rwe8p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="RedButton2/Button"]
 
@@ -248,3 +231,12 @@ shape = SubResource("ConcavePolygonShape3D_0bxjg")
 libraries = {
 "": SubResource("AnimationLibrary_qsln5")
 }
+
+[node name="Tooltip" type="Node3D" parent="RedButton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02579, 1.11585, 9.96417)
+script = ExtResource("3_g6vh5")
+label = "Press Button"
+
+[node name="Interact" type="Node3D" parent="RedButton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02579, 1.11585, 9.96417)
+script = ExtResource("4_rwe8p")
